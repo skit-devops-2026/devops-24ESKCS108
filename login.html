@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickPay | Login</title>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -75,44 +75,47 @@
       </section>
 
       <section class="right-panel">
-        <div id="login-box">
+        <div class="login-box">
           <h2>Welcome Back</h2>
-          <p id="subtitle">Login to continue</p>
-          <form id="login-form">
-            <div id="imput-box">
+          <p class="subtitle">Login to continue</p>
+          <form class="login-form">
+            <div class="imput-box">
               <label>Email</label>
-              <div id="input-field">
+              <div class="input-field">
                 <input type="email" id="email" placeholder="Enter your email" />
               </div>
               <small id="emailError"></small>
             </div>
 
-            <div id="input-box">
+            <div class="input-box">
               <label>Password</label>
-              <div id="input-field">
+              <div class="input-field">
                 <input
                   type="password"
                   id="password"
                   placeholder="Enter your password"
                 />
+                <i class="fa-solid fa-eye password-toggle" 
+                id="togglePassword">
+                </i>
               </div>
               <small id="errorpassword"></small>
             </div>
 
-            <div id="options">
-              <label>
+            <div class="options">
+              <label class="remember">
                 <input type="checkbox" />
                 Remember me?
               </label>
               <a href="#">Forgot Password</a>
             </div>
 
-            <button id="submit" type="button">Login</button>
+            <button class="submit" type="button">Login</button>
           </form>
 
-          <div id="signup">
-            Don't have an account?
-            <a href="#">signup</a>
+          <div class="signup">
+            <span>Don't have an account?</span>
+            <a href="signup.html">signup</a>
           </div>
         </div>
       </section>
