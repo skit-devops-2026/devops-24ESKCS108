@@ -1,0 +1,110 @@
+/* =========================================
+   DIGITALBANK — FOOTER
+   ========================================= */
+
+.footer {
+    background: var(--gray-900);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    padding: 70px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 1.3fr 2fr;
+
+    gap: 60px;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ---- Brand column ---- */
+
+.footer-brand p {
+    margin-top: 14px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.footer-logo .logo-icon {
+    background: var(--accent);
+}
+
+
+/* ---- Link columns ---- */
+
+.footer-links {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.footer-links h4 {
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.9rem;
+
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+
+/* ---- Bottom bar ---- */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 26px;
+
+    font-size: 0.85rem;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 22px;
+}
+
+.footer-bottom a {
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}

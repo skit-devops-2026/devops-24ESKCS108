@@ -1,0 +1,71 @@
+/* =========================================
+   DIGITALBANK — CARDS & SHARED COMPONENTS
+   ========================================= */
+
+/* ---- Section label: a small ledger-tick before
+   the eyebrow text, echoing a statement line ---- */
+
+.section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.section-label::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 18px;
+    height: 2px;
+
+    background: var(--primary);
+
+    border-radius: 2px;
+}
+
+
+/* ---- Generic card surface, reused wherever a
+   plain elevated panel is needed ---- */
+
+.card {
+    background: var(--white);
+
+    padding: 30px;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ---- Small status badge ---- */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 12px;
+
+    background: var(--primary-light);
+
+    color: var(--primary-dark);
+
+    border-radius: 50px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+}

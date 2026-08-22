@@ -3,121 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Digital Bank Banking</title>
+  <title>Contact Us | DigitalBank</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/typography.css">
+
+  <!-- Layout -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+
+  <!-- Page -->
   <link rel="stylesheet" href="css/contact.css">
+
+  <!-- Responsive -->
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- HEADER NAVBAR -->
-  <header class="container">
-    <nav class="navbar">
-      <a href="dashboard.html" class="logo">
-        <span class="logo-icon">▲</span> Digital Bank
-      </a>
-      <ul class="nav-links">
-        <li><a href="dashboard.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html" class="active">Contact Us</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="search-btn" aria-label="Search">🔍</button>
-        <a href="contact.html" class="btn btn-primary">Open Account</a>
-      </div>
-    </nav>
+  <!-- ==================== NAVBAR ==================== -->
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+
+        <a href="home.html" class="logo">
+          <span class="logo-icon">🏦</span>
+          <span>DigitalBank</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="search-btn" type="button" aria-label="Search">🔍</button>
+          <a href="signup.html" class="btn btn-primary">Open Account</a>
+          <a href="login.html" class="btn btn-outline">Log In</a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+      </nav>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <section class="contact-hero">
-      <h1>Get in Touch</h1>
-      <p>Have questions about setting up an account or using our services? Our dedicated support team is here 24/7 to assist you.</p>
-    </section>
+  <!-- ==================== MAIN CONTENT ==================== -->
 
-    <section class="contact-layout">
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Reach out through any of these options or send us a message via the form.</p>
-        
-        <div class="info-item">
-          <div class="info-icon">📍</div>
-          <div class="info-details">
-            <strong>Headquarters</strong>
-            <p>4/16 Student Circle , Gumanpura<br>Kota,324005</p>
+  <main>
+    <div class="container">
+
+      <section class="contact-hero">
+        <span class="hero-eyebrow">WE'RE HERE TO HELP</span>
+        <h1>Get in Touch</h1>
+        <p>Have questions about setting up an account or using our services? Our dedicated support team is here 24/7 to assist you.</p>
+      </section>
+
+      <section class="contact-layout">
+
+        <!-- Contact Info -->
+        <div class="contact-info card">
+          <h3>Contact Information</h3>
+          <p>Reach out through any of these options or send us a message via the form.</p>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-details">
+              <strong>Headquarters</strong>
+              <p>4/16 Student Circle, Gumanpura<br>Kota, 324005</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-details">
+              <strong>Phone Support</strong>
+              <p>1-800-555-DIGITAL (2739)<br>Toll-free 24/7</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-details">
+              <strong>Email Support</strong>
+              <p>support@digitalbank.com</p>
+            </div>
           </div>
         </div>
 
-        <div class="info-item">
-          <div class="info-icon">📞</div>
-          <div class="info-details">
-            <strong>Phone Support</strong>
-            <p>1-800-555-Digital Bank (2739)<br>Toll-free 24/7</p>
-          </div>
+        <!-- Contact Form -->
+        <div class="contact-form card">
+          <form action="#" method="POST">
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Cristiano" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="cris@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" class="form-control">
+                <option>General Inquiry</option>
+                <option>Account Setup</option>
+                <option>Loans &amp; Interest</option>
+                <option>Technical Support</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" placeholder="How can we help you today?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+          </form>
         </div>
 
-        <div class="info-item">
-          <div class="info-icon">✉️</div>
-          <div class="info-details">
-            <strong>Email Support</strong>
-            <p>support@Digital Bankbanking.com</p>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Cristiano" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="form-control" placeholder="Cris@example.com" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" class="form-control">
-              <option>General Inquiry</option>
-              <option>Account Setup</option>
-              <option>Loans & Interest</option>
-              <option>Technical Support</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" class="form-control" placeholder="How can we help you today?" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-        </form>
-      </div>
-    </section>
+    </div>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ==================== FOOTER ==================== -->
+
   <footer class="footer">
     <div class="container">
+
       <div class="footer-content">
-        <a href="dashboard.html" class="logo" style="color: white;">
-          <span class="logo-icon">▲</span> Digital Bank
-        </a>
+
+        <div class="footer-brand">
+          <a href="home.html" class="logo footer-logo">
+            <span class="logo-icon">🏦</span>
+            <span>DigitalBank</span>
+          </a>
+          <p>Simple. Secure. Smart banking.</p>
+        </div>
+
         <div class="footer-links">
-          <a href="dashboard.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
+          <div>
+            <h4>Company</h4>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h4>Account</h4>
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Open Account</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <a href="contact.html">Help Center</a>
+            <a href="contact.html">Contact Support</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigitalBank. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
         </div>
       </div>
-      <div class="footer-copyright">
-        &copy; 2026 Digital Bank Digital Bank. All rights reserved.
-      </div>
+
     </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="js/common/navbar.js"></script>
+  <script src="js/common/reveal.js"></script>
 
 </body>
 </html>

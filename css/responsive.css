@@ -1,0 +1,204 @@
+/* =========================================
+   DIGITALBANK — RESPONSIVE
+   ========================================= */
+
+
+/* =========================================
+   TABLET  (≤ 1024px)
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: none;
+
+        margin: 0 auto;
+    }
+
+    .hero p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accounts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .manage-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .manage-image {
+        order: -1;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE  (≤ 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar.nav-open {
+        flex-wrap: wrap;
+    }
+
+    .navbar.nav-open .nav-links {
+        order: 3;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+
+        width: 100%;
+
+        padding-top: 16px;
+
+        margin-top: 16px;
+
+        border-top: 1px solid var(--gray-200);
+    }
+
+    .navbar.nav-open .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 10px 0;
+    }
+
+    .navbar.nav-open .nav-actions {
+        order: 4;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .navbar.nav-open .search-btn {
+        display: none;
+    }
+
+    .features-section,
+    .accounts-section,
+    .manage-section {
+        padding: 70px 0;
+    }
+
+    .features-grid,
+    .accounts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-banner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        text-align: left;
+
+        padding: 36px;
+    }
+
+    .store-buttons {
+        width: 100%;
+    }
+
+    .store-btn {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE  (≤ 480px)
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .phone-mockup {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 28px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+}
