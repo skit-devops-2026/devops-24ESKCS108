@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickPay | Create Account</title>
+
+    <link rel="stylesheet" href="css/signup.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="left-panel">
+            <div class="left-content">
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        Q
+                    </div>
+
+                    <span>QuickPay</span>
+
+                </div>
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        SMART DIGITAL BANKING
+                    </p>
+
+                    <h1>
+                        Your money.<br>
+                        Your future.
+                    </h1>
+
+                    <p class="hero-description">
+                        Create your account and experience
+                        simple, secure and smarter digital banking.
+                    </p>
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <div class="feature-text">
+                                <h3>Bank Securely</h3>
+
+                                <p>
+                                    Your account is protected.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div class="feature-text">
+                                <h3>Fast & Simple</h3>
+
+                                <p>
+                                    Manage your money effortlessly.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div class="feature-text">
+                                <h3>24/7 Support</h3>
+
+                                <p>
+                                    We're always here to help.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="right-panel">
+
+            <div class="signup-box">
+
+                <div class="signup-header">
+
+                    <h2>Create an account</h2>
+
+                    <p>
+                        Get started with QuickPay today.
+                    </p>
+
+                </div>
+
+
+                <form id="signupForm">
+
+                    <div class="input-box">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-regular fa-user input-icon"></i>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                            >
+
+                        </div>
+
+                        <small id="errorname"></small>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-regular fa-envelope input-icon"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                        <small id="erroremail"></small>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-lock input-icon"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                            >
+
+                            <i
+                                class="fa-solid fa-eye password-toggle"
+                                id="togglePassword">
+                            </i>
+
+                        </div>
+
+                        <small id="errorpassword"></small>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-lock input-icon"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                            >
+
+                            <i
+                                class="fa-solid fa-eye password-toggle"
+                                id="toggleConfirmPassword">
+                            </i>
+
+                        </div>
+
+                        <small id="errorconfirm"></small>
+
+                    </div>
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                        </span>
+
+                    </label>
+
+                    <small id="errorterms"></small>
+
+                    <button
+                        class="submit"
+                        type="submit"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+                <div class="login-link">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/signup.js"></script>
+
+</body>
+</html>
