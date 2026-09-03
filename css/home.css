@@ -1,11 +1,3 @@
-/* =========================================
-   DIGITALBANK HOME PAGE
-   ========================================= */
-
-
-/* =========================================
-   SCROLL REVEAL (used by js/pages/home.js)
-   ========================================= */
 
 .reveal {
     opacity: 0;
@@ -20,11 +12,6 @@
 
     transform: translateY(0);
 }
-
-
-/* =========================================
-   HERO
-   ========================================= */
 
 .hero {
     position: relative;
@@ -60,7 +47,7 @@
     pointer-events: none;
 }
 
-.hero-container {
+.hero-container {   
     position: relative;
 
     display: grid;
@@ -125,11 +112,6 @@
 
     flex-wrap: wrap;
 }
-
-
-/* =========================================
-   PHONE MOCKUP
-   ========================================= */
 
 .hero-image {
     display: flex;
@@ -214,11 +196,6 @@
 .positive {
     color: var(--success);
 }
-
-
-/* =========================================
-   SECTIONS
-   ========================================= */
 
 .features-section,
 .accounts-section,
