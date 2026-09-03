@@ -25,6 +25,4 @@ jobs:
           test -f signup.html
 
       - name: Run tests
-        run: |
-          echo "Running Digital Bank tests..."
-          echo "Basic project structure test passed."
+        run: bash tests/project-structure.sh
