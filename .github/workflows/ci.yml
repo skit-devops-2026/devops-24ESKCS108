@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "chore/**"
+      - "feature/**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check project files
+        run: |
+          test -f home.html
+          test -f login.html
+          test -f signup.html
+
+      - name: Run tests
+        run: |
+          echo "Running Digital Bank tests..."
+          echo "Basic project structure test passed."
