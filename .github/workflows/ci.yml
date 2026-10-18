@@ -20,9 +20,8 @@ jobs:
 
       - name: Check project files
         run: |
-          test -f home.html
-          test -f login.html
-          test -f signup.html
+          test -f src/App.js
+          test -f public/index.html
 
       - name: Run tests
         run: bash tests/project-structure.sh
