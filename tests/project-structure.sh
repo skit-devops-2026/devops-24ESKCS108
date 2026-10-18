@@ -1,11 +1,11 @@
 #!/bin/bash
-
-set -e
-
 echo "Testing Digital Bank project structure..."
 
-test -f home.html
-test -f login.html
-test -f signup.html
-
-echo "All project structure tests passed!"
+# Check for essential React structure instead of old HTML files
+if [ -f "src/App.js" ] && [ -f "public/index.html" ]; then
+    echo "React project structure verified!"
+    exit 0
+else
+    echo "Missing React entry files!"
+    exit 1
+fi
