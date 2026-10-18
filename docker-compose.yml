@@ -1,9 +1,7 @@
-
 services:
   digitalbank:
     build:
       context: .
-    container_name: digitalbank
     ports:
       - "8081:80"
     restart: unless-stopped
