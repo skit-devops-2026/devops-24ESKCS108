@@ -29,18 +29,67 @@ Core Features
 - Backend: JavaScript
 - Database: NULL
 
-## Running locally
+## Running with Docker Compose
+
+Build and start the application:
 
 ```bash
-make install
-make run
+docker compose up -d --build
 ```
 
-## Live URL
+Check container status and logs:
 
-<Add once M5 is done. Until then, leave as is.>
+```bash
+docker compose ps
+docker compose logs --tail=50
+```
 
-## Health endpoint
+Open the application at http://localhost:8081.
 
-`GET /health` returns the running commit SHA. See `Makefile` and the milestone
-sheet for why this is required.
+Stop the services:
+
+```bash
+docker compose down
+```
+
+## Kubernetes Deployment
+
+Apply the Deployment and Service manifests:
+
+```bash
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+Check the deployment and pods:
+
+```bash
+kubectl get deployments
+kubectl get pods
+kubectl get services
+```
+
+Access the application through port forwarding:
+
+```bash
+kubectl port-forward service/digitalbank 8080:80
+```
+
+Open http://localhost:8080 while port forwarding is running.
+
+## Monitoring
+
+Prometheus scrapes the configured Prometheus and NGINX exporter targets every 15 seconds.
+
+- Prometheus dashboard: http://localhost:9090
+- NGINX exporter metrics: http://localhost:9113/metrics
+- Prometheus target health: http://localhost:9090/targets
+
+Confirm that the configured targets show as `UP`.
+
+## CI/CD
+
+- **GitHub Actions:** Runs the repository's configured CI workflow.
+- **Jenkins:** Runs the configured Jenkins pipeline.
+
+Check the respective build logs for the latest execution status.
