@@ -1,0 +1,35 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: digitalbank
+  labels:
+    app: digitalbank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: digitalbank
+  template:
+    metadata:
+      labels:
+        app: digitalbank
+    spec:
+      containers:
+        - name: digitalbank
+          image: digitalbank:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 20
