@@ -1,7 +1,28 @@
+
 services:
   digitalbank:
     build:
       context: .
     ports:
       - "8081:80"
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped
+
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: nginx-exporter
+    command:
+      - --nginx.scrape-uri=http://digitalbank:80/stub_status
+    ports:
+      - "9113:9113"
+    depends_on:
+      - digitalbank
     restart: unless-stopped
