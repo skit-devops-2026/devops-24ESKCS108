@@ -1,3 +1,4 @@
+
 name: CI
 
 on:
@@ -10,6 +11,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,8 +25,35 @@ jobs:
 
       - name: Check project files
         run: |
-          test -f src/App.js
-          test -f public/index.html
+          test -f home.html
+          test -f login.html
+          test -f signup.html
 
       - name: Run tests
         run: bash tests/project-structure.sh
+
+  docker:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
