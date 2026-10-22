@@ -23,11 +23,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check project files
+      - name: Check React project files
         run: |
-          test -f home.html
-          test -f login.html
-          test -f signup.html
+          test -f package.json
+          test -f package-lock.json
+          test -f Dockerfile
+          test -f nginx.conf
+          test -d src
+          test -d public
 
       - name: Run tests
         run: bash tests/project-structure.sh
