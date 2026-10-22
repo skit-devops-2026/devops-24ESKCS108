@@ -1,0 +1,27 @@
+{
+  "title": "DigitalBank Monitoring",
+  "uid": "digitalbank-monitoring",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "id": 1,
+      "title": "Application Availability",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [
+        {"expr": "up", "refId": "A", "legendFormat": "{{instance}}"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Scrape Duration",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [
+        {"expr": "scrape_duration_seconds", "refId": "A"}
+      ]
+    }
+  ]
+}
