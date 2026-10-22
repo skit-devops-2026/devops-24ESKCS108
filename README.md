@@ -1,6 +1,6 @@
 # DigitalBank
 
-- Live URL: [https://devops-24eskcs119.onrender.com](https://digitalbank-e6ap.onrender.com)
+- Live URL: [https://devops-24eskcs108.onrender.com](https://digitalbank-e6ap.onrender.com)
 - Docker image: https://hub.docker.com/r/devansh232406/devops-24eskcs108
 - Pull command: docker pull devansh232406/devops-24eskcs108:latest
 - Local URL: http://localhost:8081
