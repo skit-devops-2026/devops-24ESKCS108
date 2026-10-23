@@ -1,0 +1,27 @@
+﻿{
+  "title": "DigitalBank Monitoring",
+  "uid": "digitalbank-monitoring",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "id": 1,
+      "title": "Prometheus Targets Up",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [
+        {"expr": "up", "refId": "A"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "HTTP Requests",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [
+        {"expr": "rate(prometheus_http_requests_total[5m])", "refId": "A"}
+      ]
+    }
+  ]
+}
