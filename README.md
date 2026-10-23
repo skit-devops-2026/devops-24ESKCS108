@@ -1,5 +1,10 @@
 # DigitalBank
 
+## Live URL
+
+- **Live URL:** https://digitalbank-e6ap.onrender.com
+- **Docker image:** https://hub.docker.com/r/devansh232406/devops-24eskcs108
+
 ## Author
 
 | Roll No. | Name | GitHub username |
@@ -40,10 +45,6 @@ Check container status and logs:
 docker compose ps
 docker compose logs --tail=50
 ```
-
-
-- **Live URL:** https://digitalbank-e6ap.onrender.com
-- **Docker image:** https://hub.docker.com/r/devansh232406/devops-24eskcs108
   
 Stop the services:
 
