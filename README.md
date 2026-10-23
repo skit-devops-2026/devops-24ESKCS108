@@ -1,10 +1,5 @@
 # DigitalBank
 
-- Live URL: [https://devops-24eskcs108.onrender.com](https://digitalbank-e6ap.onrender.com)
-- Docker image: https://hub.docker.com/r/devansh232406/devops-24eskcs108
-- Pull command: docker pull devansh232406/devops-24eskcs108:latest
-- Local URL: http://localhost:8081
-
 ## Author
 
 | Roll No. | Name | GitHub username |
@@ -46,8 +41,12 @@ docker compose ps
 docker compose logs --tail=50
 ```
 
-Open the application at http://localhost:8081.
 
+- Live URL: [https://devops-24eskcs108.onrender.com](https://digitalbank-e6ap.onrender.com)
+- Docker image: https://hub.docker.com/r/devansh232406/devops-24eskcs108
+- Pull command: docker pull devansh232406/devops-24eskcs108:latest
+- Local URL: http://localhost:8081
+  
 Stop the services:
 
 ```bash
